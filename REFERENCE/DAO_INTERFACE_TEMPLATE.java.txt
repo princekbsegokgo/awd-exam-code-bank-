@@ -1,0 +1,10 @@
+// This is a study TEMPLATE, not compiled source. Replace Item with your class.
+public interface ItemDao {
+    List<Item> findAll() throws SQLException;
+    Item findById(int id) throws SQLException;
+    void create(Item item) throws SQLException;
+    boolean update(Item item) throws SQLException;
+    boolean delete(int id) throws SQLException;
+}
+// In the implementing class, use PreparedStatement and try-with-resources.
+// Keep JDBC code inside DAO classes, not JSP files.

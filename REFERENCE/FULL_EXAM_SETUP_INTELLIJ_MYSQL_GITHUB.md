@@ -61,8 +61,8 @@ mvn clean package
 ```
 5. Check `target/awd-codebank.war`. If `mvn` is not on PATH, use IntelliJ's Maven Tool Window.
 
-## 5. Tomcat 10.1 deployment
-- The codebank uses `jakarta.servlet.*`, compatible with Tomcat 10.1.
+## 5. Tomcat 11 deployment
+- The codebank uses `jakarta.servlet.*` with Servlet API 6.1, compatible with Tomcat 11. Tomcat 11 requires Java 17 or later.
 - In IDEs offering Tomcat integration: add Tomcat Server (Local) run configuration and deploy the WAR artifact; confirm the context path.
 - If no IDE server integration: after Maven packaging, copy `target/awd-codebank.war` into Tomcat's `webapps` and run Tomcat with your lab's permitted method.
 - Open the default WAR context path:
@@ -181,3 +181,17 @@ Example **Products → Students**:
 - [ ] Follow required submission format and original-work rules.
 
 **Safety/academic note:** The photographed slide contained shared credentials, omitted here. The simple session login is a **learning demo**, not the required Jakarta Security FORM authentication for LIBIS CA3.
+
+
+## 13. Tomcat 11 exam update (13 November 2026)
+- Lecturer recommends **Tomcat 11**; use it rather than the older Tomcat 10.1 instructions.
+- Requires **Java 17 or newer**; codebank Maven compiles for Java 17.
+- Jakarta Servlet **6.1**, JSP/Pages **4.0**, Expression Language **6.0**.
+- The `pom.xml` dependency for `jakarta.servlet-api` was updated to `6.1.0` with `provided` scope.
+- In IntelliJ configure Tomcat home to the *Tomcat 11* extracted installation folder, not Tomcat 10.
+- If manually deploying, build `mvn clean package`, copy `target/awd-codebank.war` into **Tomcat 11** `webapps`, and run `bin/startup.bat` on Windows. Open `http://localhost:8080/awd-codebank/` (unless the lab sets another port/context).
+- Check `java -version` and `mvn -version`, then confirm Tomcat started from its console/logs.
+- For Tomcat 11 deployment, keep `jakarta.servlet.*` imports; old `javax.servlet.*` code will not compile for this target.
+- JSTL libraries are supplied by Maven; test JSP pages after deployment.
+- For database integration, use the lecturer's DataSource/JNDI directions for CA3, not the simple DriverManager demo if the exam asks for DataSource.
+- Apache official compatibility reference: https://tomcat.apache.org/whichversion.html

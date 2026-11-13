@@ -1,0 +1,2 @@
+<%@ page contentType="text/html;charset=UTF-8" %><%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<!DOCTYPE html><html><body><h2>Registration response</h2><p><c:out value="${notice}" default="No registration was just submitted."/></p></body></html>

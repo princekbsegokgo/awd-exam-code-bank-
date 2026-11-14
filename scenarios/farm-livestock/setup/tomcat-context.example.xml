@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TEMPLATE ONLY. Copy to TOMCAT_HOME/conf/Catalina/localhost/farm-livestock.xml -->
+<!-- Set username/password in that LOCAL FILE only. Never commit credentials. -->
+<!-- Copy a matching MySQL Connector/J JAR into TOMCAT_HOME/lib. -->
+<Context>
+ <Resource name="jdbc/farmdb"
+           auth="Container"
+           type="javax.sql.DataSource"
+           factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+           driverClassName="com.mysql.cj.jdbc.Driver"
+           url="jdbc:mysql://localhost:3306/farm_exam"
+           username="YOUR_DB_USERNAME"
+           password="YOUR_DB_PASSWORD"
+           maxTotal="20"
+           maxIdle="5"
+           maxWaitMillis="10000"/>
+</Context>

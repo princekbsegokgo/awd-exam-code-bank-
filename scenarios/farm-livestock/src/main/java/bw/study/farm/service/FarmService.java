@@ -1,9 +1,9 @@
-package bw.study.farm.service;
+package cse24_033.service;
 
-import bw.study.farm.dao.FarmerDao;
-import bw.study.farm.dao.LivestockDao;
-import bw.study.farm.model.Farmer;
-import bw.study.farm.model.Livestock;
+import cse24_033.dao.FarmerDao;
+import cse24_033.dao.LivestockDao;
+import cse24_033.model.Farmer;
+import cse24_033.model.Livestock;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;

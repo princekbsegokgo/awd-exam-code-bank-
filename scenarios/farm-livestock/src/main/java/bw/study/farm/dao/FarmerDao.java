@@ -1,6 +1,6 @@
-package bw.study.farm.dao;
+package cse24_033.dao;
 
-import bw.study.farm.model.Farmer;
+import cse24_033.model.Farmer;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

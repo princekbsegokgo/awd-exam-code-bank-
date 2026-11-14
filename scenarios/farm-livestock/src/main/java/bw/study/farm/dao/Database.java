@@ -1,4 +1,4 @@
-package bw.study.farm.dao;
+package cse24_033.dao;
 
 import javax.naming.InitialContext;
 import javax.naming.NamingException;

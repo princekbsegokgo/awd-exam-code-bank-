@@ -1,4 +1,4 @@
-package bw.study.farm.model;
+package cse24_033.model;
 
 import java.time.LocalDate;
 

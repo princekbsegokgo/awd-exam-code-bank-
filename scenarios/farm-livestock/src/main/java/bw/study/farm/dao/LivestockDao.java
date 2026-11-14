@@ -1,6 +1,6 @@
-package bw.study.farm.dao;
+package cse24_033.dao;
 
-import bw.study.farm.model.Livestock;
+import cse24_033.model.Livestock;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;

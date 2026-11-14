@@ -1,7 +1,7 @@
-package bw.study.farm.controller;
+package cse24_033.controller;
 
-import bw.study.farm.model.Farmer;
-import bw.study.farm.service.FarmService;
+import cse24_033.model.Farmer;
+import cse24_033.service.FarmService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

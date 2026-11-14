@@ -1,5 +1,3 @@
-package bw.study.farm.model;
-
 /** One farmer can own many livestock records. JavaBean getters support JSP EL. */
 public class Farmer {
     private final int farmerId;
